@@ -5,8 +5,16 @@ Used in CS2, Dota 2, and other Source 2 games for `.vmap`, `.vpcf`, `.vsnd`, and
 
 ## Install
 
+### npm registry
+
 ```sh
 npm install kv3-js
+```
+
+### GitHub Packages
+
+```sh
+npm install @AcaroMan/kv3-js --registry=https://npm.pkg.github.com
 ```
 
 ## Usage
@@ -91,6 +99,19 @@ stringifyKV3File('./out.kv3', value, { headerMode: 'omit' });
 npx kv3-js parse ./example.kv3
 npx kv3-js stringify ./example.kv3 --out ./out.kv3
 ```
+
+## Development
+
+```sh
+npm install
+npm test
+```
+
+## CI and releases
+
+- CI runs on every push and pull request via GitHub Actions.
+- Releases are published automatically when a tag matching `v*` is pushed.
+- The publish workflow uses the GitHub Packages registry with the `GITHUB_TOKEN` provided by Actions.
 
 ## Flags
 
