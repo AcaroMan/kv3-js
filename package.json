@@ -1,0 +1,42 @@
+{
+  "name": "kv3-js",
+  "version": "1.0.0",
+  "description": "Parse and stringify Valve KeyValues3 (KV3) format for Source 2 assets in Node.js.",
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "homepage": "https://github.com/AcaroMan/kv3-js",
+  "bugs": {
+    "url": "https://github.com/AcaroMan/kv3-js/issues"
+  },
+  "bin": {
+    "kv3-js": "./bin/kv3-js.js"
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "kv3",
+    "keyvalues3",
+    "valve",
+    "source2",
+    "cs2",
+    "dota2",
+    "vmap",
+    "parser"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AcaroMan/kv3-js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
