@@ -137,6 +137,19 @@ run('parse: KV3 Flag reference', () => {
   assert.deepStrictEqual(value, expectedJsValue);
 });
 
+run('parse: non-string input throws a clear error', () => {
+  assert.throws(() => parseKV3(42), /must be a string/i);
+});
+
+run('parseFile: missing file throws a helpful error', () => {
+  const missingFile = path.join(os.tmpdir(), `kv3-js-missing-${Date.now()}.kv3`);
+  assert.throws(() => parseKV3File(missingFile), (err) => {
+    assert.ok(err instanceof Error);
+    assert.match(err.message, /Failed to read KV3 file/i);
+    assert.match(err.message, new RegExp(missingFile.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+    return true;
+  });
+});
 
 run('parse: KV3 header is extracted', () => {
   const header = new KV3Header();

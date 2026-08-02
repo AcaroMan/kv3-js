@@ -7,8 +7,15 @@ const { stringify } = require('./src/serializer');
 const { KV3Header } = require('./src/header');
 
 function parseFile(filePath) {
-  const text = fs.readFileSync(filePath, 'utf8');
-  return parse(text);
+  try {
+    const text = fs.readFileSync(filePath, 'utf8');
+    return parse(text);
+  } catch (err) {
+    if (err && err.code === 'ENOENT') {
+      throw new Error(`Failed to read KV3 file: ${filePath}`);
+    }
+    throw err;
+  }
 }
 
 function stringifyFile(filePath, value, options = {}) {

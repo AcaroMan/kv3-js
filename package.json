@@ -13,7 +13,7 @@
     "url": "https://github.com/AcaroMan/kv3-js/issues"
   },
   "bin": {
-    "kv3-js-cli": "./bin/kv3-js.js"
+    "kv3-js": "./bin/kv3-js.js"
   },
   "exports": {
     ".": "./index.js"

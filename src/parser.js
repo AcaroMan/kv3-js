@@ -13,6 +13,10 @@ const PRIMITIVE_TERMINATORS = new Set([' ', '\n', '\r', '\t', '=', '{', '}', '['
  * @throws {SyntaxError} If the KV3 is malformed.
  */
 function parse(text) {
+  if (typeof text !== 'string') {
+    throw new TypeError('KV3 input must be a string');
+  }
+
   let header = null;
 
   const parsedHeader = parseHeader(text);
