@@ -11,12 +11,6 @@ Used in CS2, Dota 2, and other Source 2 games for `.vmap`, `.vpcf`, `.vsnd`, and
 npm install kv3-js
 ```
 
-### GitHub Packages
-
-```sh
-npm install @AcaroMan/kv3-js --registry=https://npm.pkg.github.com
-```
-
 ## Usage
 
 ### `parseKV3(text)` — KV3 → JavaScript
@@ -111,7 +105,7 @@ npm test
 
 - CI runs on every push and pull request via GitHub Actions.
 - Releases are published automatically when a tag matching `v*` is pushed.
-- The publish workflow uses the GitHub Packages registry with the `GITHUB_TOKEN` provided by Actions.
+- The publish workflow publishes to the npm public registry and creates a GitHub Release for the tag.
 
 ## Flags
 

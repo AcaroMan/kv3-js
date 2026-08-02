@@ -1,6 +1,6 @@
 {
-  "name": "@AcaroMan/kv3-js",
-  "version": "1.0.1",
+  "name": "kv3-js",
+  "version": "1.0.0",
   "description": "Parse and stringify Valve KeyValues3 (KV3) format for Source 2 assets in Node.js.",
   "main": "index.js",
   "types": "./index.d.ts",
@@ -41,7 +41,7 @@
     "url": "https://github.com/AcaroMan/kv3-js"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
+    "registry": "https://registry.npmjs.org",
     "access": "public"
   },
   "engines": {
